@@ -2,37 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mood-Based Telugu Music Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🎵 Mood-Based Telugu Music Recommender</h1>
-  <p>Select your mood, speak it, or type how you feel!</p>
-
-  <!-- Mood Buttons -->
-  <div class="mood-buttons">
-    <button class="mood-btn" style="background:#FFD700;" onclick="recommend('happy')">😊 Happy</button>
-    <button class="mood-btn" style="background:#87CEFA;" onclick="recommend('sad')">😢 Sad</button>
-    <button class="mood-btn" style="background:#FF6347;" onclick="recommend('angry')">😡 Angry</button>
-    <button class="mood-btn" style="background:#90EE90;" onclick="recommend('relax')">😴 Relax</button>
-    <button class="mood-btn" style="background:#FF69B4;" onclick="recommend('energetic')">💪 Energetic</button>
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+    <div class="controls">
+      <button id="resetBtn">Reset Game</button>
+      <button id="modeBtn">Switch Mode (Single/Two Player)</button>
+    </div>
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <p id="status">Player X's turn</p>
   </div>
-
-  <!-- Voice Input -->
-  <button id="voiceBtn" onclick="startVoice()">🎤 Speak Your Mood</button>
-
-  <!-- AI Text Mood -->
-  <div class="text-ai">
-    <input id="moodText" type="text" placeholder="Type how you feel... (e.g., 'Feeling excited', 'చాలా సంతోషంగా ఉన్నాను')" />
-    <button onclick="detectMoodFromText()">🤖 Get Songs with AI</button>
-  </div>
-
-  <!-- Results -->
-  <div id="results"></div>
-
-  <!-- Sentiment.js (offline sentiment analysis) -->
-  <script src="https://unpkg.com/sentiment@5.0.2/build/sentiment.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
